@@ -11,4 +11,15 @@ public class ListView {
             System.out.println(elem);
         }
     }
+
+    public void printListId(List<Integer> list) {
+        if (list == null) {
+            System.out.println("Такой группы нет");
+        } else {
+            System.out.println("Общий список Id:");
+            for (Integer elem : list) {
+                System.out.printf("%d ", elem);
+            }
+        }
+    }
 }

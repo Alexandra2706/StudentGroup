@@ -3,19 +3,19 @@ package Model;
 import java.util.List;
 
 public abstract class Group {
-    protected User teacher;
+    protected Teacher teacher;
     protected List<Student> studentsList;
 
-    public Group(User teacher, List<Student> studentsList) {
+    public Group(Teacher teacher, List<Student> studentsList) {
         this.teacher = teacher;
         this.studentsList = studentsList;
     }
 
-    public User getTeacher() {
+    public Teacher getTeacher() {
         return teacher;
     }
 
-    public void setTeacher(User teacher) {
+    public void setTeacher(Teacher teacher) {
         this.teacher = teacher;
     }
 

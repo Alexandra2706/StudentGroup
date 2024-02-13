@@ -59,6 +59,14 @@ public class Controller {
         groupView.groupPrint(group2);
         StudyGroup group3 = studyService.readGroup(3);
         groupView.groupPrint(group3);
+        System.out.println("--------Id преподавателя группы----------");
+        Integer teacherId1 = studyService.readTeacherId(3);
+        teacherView.printId(teacherId1);
+        Integer teacherId2 = studyService.readTeacherId(4);
+        teacherView.printId(teacherId2);
+        System.out.println("--------Id студентов группы----------");
+        List<Integer> stList = studyService.readStudentId(1);
+        listView.printListId(stList);
     }
 
 }

@@ -5,7 +5,7 @@ import java.util.List;
 public class StudyGroup extends Group {
     private Integer groupId;
 
-    public StudyGroup(Integer groupId, User teacher, List<Student> studentsList) {
+    public StudyGroup(Integer groupId, Teacher teacher, List<Student> studentsList) {
         super(teacher, studentsList);
         this.groupId = groupId;
     }

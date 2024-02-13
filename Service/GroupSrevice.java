@@ -23,4 +23,20 @@ public interface GroupSrevice {
      * @return - группу
      */
     public StudyGroup readGroup(int id);
+
+    /**
+     * Метода возвращает преподавателя группы
+     * 
+     * @param id - id группы
+     * @return - id Преподавателя
+     */
+    public Integer readTeacherId(int id);
+
+    /**
+     * Метода возвращает список студентов группы
+     * 
+     * @param id - id группы
+     * @return - список id студентов
+     */
+    public List<Integer> readStudentId(int id);
 }

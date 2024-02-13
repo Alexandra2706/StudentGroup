@@ -33,4 +33,27 @@ public class StudyGroupService implements GroupSrevice {
         }
         return null;
     }
+
+    @Override
+    public Integer readTeacherId(int id) {
+        StudyGroup group = readGroup(id);
+        if (group != null) {
+            return group.getTeacher().getTeacherId();
+        }
+        return null;
+    }
+
+    @Override
+    public List<Integer> readStudentId(int id) {
+        StudyGroup group = readGroup(id);
+        if (group == null) {
+            return null;
+        }
+        List<Integer> listId = new ArrayList<>();
+        List<Student> studentList = group.getStudentsList();
+        for (Student student : studentList) {
+            listId.add(student.getStudentId());
+        }
+        return listId;
+    }
 }
